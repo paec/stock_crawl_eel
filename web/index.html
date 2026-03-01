@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>國泰爬蟲控制台</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4 text-center">🚀 自動化工具控制台</h1>
+        
+        <div class="card p-4 mb-4">
+            <h5 class="card-title">⚙️ 功能選單</h5>
+            <div class="btn-group" role="group" aria-label="功能按鈕組">
+                <button type="button" class="btn btn-success" id="btn-tree-spirit">
+                    <span class="spinner-border spinner-border-sm visually-hidden" role="status" aria-hidden="true" id="spinner"></span>
+                    🌳 樹精靈
+                </button>
+                
+                <button type="button" class="btn btn-outline-custom" id="btn-yf">💼 永豐</button>
+
+                <button type="button" class="btn btn-inventory" id="btn-inventory">
+                    📦 庫存損益
+                </button>
+            </div>
+        </div>
+
+        <div id="condition-container" class="card p-4 mb-4 d-none">
+            <h5 class="card-title">🔧 設定條件</h5>
+
+            <!-- 抓取月份 -->
+            <div class="mb-3 d-flex align-items-center input-group-custom">
+                <label for="input-month" class="form-label me-3 mb-0">📅 抓取幾個月：</label>
+                <input id="input-month" type="number" class="form-control" style="width: 120px;" placeholder="3" min="1" max="12">
+            </div>
+
+            <!-- 顯示瀏覽器 Toggle -->
+            <div class="form-check form-switch mb-3">
+                <input class="form-check-input tree-headless-toggle" type="checkbox" style="width: 50px; height: 25px;">
+                <label class="form-check-label ms-2">🖥️ 顯示瀏覽器</label>
+            </div>
+
+            <!-- 確認按鈕 -->
+            <button type="button" class="btn btn-primary" id="btn-confirm-condition">✅ 確認並執行</button>
+        </div>
+
+        <!-- 📦 庫存損益條件區 -->
+        <div id="condition-container-inventory" class="card p-4 mb-4 d-none">
+            <h5 class="card-title">🔧 設定條件</h5>
+
+            <!-- 匯率 -->
+            <div class="mb-3 d-flex align-items-center input-group-custom">
+                <label for="input-rate" class="form-label me-3 mb-0">💱 匯率：</label>
+                <input id="input-rate" 
+                    type="number" 
+                    class="form-control" 
+                    style="width:120px;"
+                    value="31"
+                    step="0.1">
+            </div>
+
+            <!-- 顯示瀏覽器 Toggle -->
+            <div class="form-check form-switch mb-3">
+                <input class="form-check-input inventory-headless-toggle" type="checkbox" style="width: 50px; height: 25px;">
+                <label class="form-check-label ms-2">🖥️ 顯示瀏覽器</label>
+            </div>
+            
+            <!-- 確認按鈕 -->
+            <button type="button" class="btn btn-primary" id="btn-confirm-inventory">
+                ✅ 確認並執行
+            </button>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header">
+                📊 執行結果輸出區
+            </div>
+            <div class="card-body p-0">
+                <textarea id="output-area" class="output-box" readonly>⏳ 等待指令中...</textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

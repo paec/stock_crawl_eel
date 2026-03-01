@@ -1,0 +1,2 @@
+KEY = "TjxBjcM8dLfVI-zpFNJwD5WR5Zf5pxvMeUh37nhnuIk="
+YF_CATHAY_MIMA = "gAAAAABplzGGu_cYtgEh16RkSV_wxHsDkzYE1lqqRq8pr9CgXs7N9CUcHkhgYidU9YQ2ID9Vp3t3t3GU-_3YTcCe-mJojvMu_w=="
